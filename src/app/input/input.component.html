@@ -1,0 +1,11 @@
+<div class="col-xl-4">
+    <label [ngStyle]="{color:name === '' ? 'red':'green' }">Username:</label>
+     <input type="text" class="form-control" #inputUser [(ngModel)]="name">
+<hr>
+     <label [style.color]="pass === '' ? 'red':'green' ">Password</label>
+     <input type="text" class="form-control" #inputPass [(ngModel)]="pass">
+     <hr>
+     
+     <button class="btn btn-success" (click)="fun(inputPass)" [disabled]="(name != '' &&  pass != '') ? false:true">Submit</button>
+     <p>{{name}}</p>
+</div>
